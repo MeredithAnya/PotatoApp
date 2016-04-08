@@ -13,3 +13,54 @@
  *= require_tree .
  *= require_self
  */
+
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+ul {
+  list-style: none;
+}
+li {
+  list-style: none; 
+}
+
+.potato-feed-header {
+  width: 50%;
+  height: 80%;
+  margin: 0 auto;
+  padding: 60px;
+  border: 3px solid pink;
+
+}
+.potato-feed-list {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid black;
+
+}
+
+.potato-feed-list-item {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+   
+
+
+
+
