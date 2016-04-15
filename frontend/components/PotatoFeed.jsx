@@ -1,5 +1,6 @@
 var React = require('react');
 var PotatoStore = require('../stores/potatoStore');
+var PotatoFeedDetail = require('./PotatoFeedDetail');
 var ApiUtil = require('../util/apiUtil');
 
 var PotatoFeed = React.createClass({
@@ -25,11 +26,11 @@ var PotatoFeed = React.createClass({
       <div className="potato-feed-header">
         <h1 className="potato-title">POTATO FEED</h1>
         <ul className="potato-feed-list">
-          <li className="potato-feed-list-item">Hello im a potato</li>
-          <li className="potato-feed-list-item">Hello im a potato</li>
-          <li className="potato-feed-list-item">Hello im a potato</li>
-          <li className="potato-feed-list-item">Hello im a potato</li>
-          <li className="potato-feed-list-item">Hello im a potato</li>
+          <PotatoFeedDetail/>
+          <PotatoFeedDetail/>
+          <PotatoFeedDetail/>
+          <PotatoFeedDetail/>
+          <PotatoFeedDetail/>
         </ul>
       </div>
     );
