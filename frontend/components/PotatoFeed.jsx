@@ -15,12 +15,14 @@ var PotatoFeed = React.createClass({
   	this.setState({potatoPosts: PotatoStore.all()})
   },
   getPotatoList: function(){
+    
+
     //if statement here and get the list of potato feeds
   },	
   render: function () {
 
     var potatoesList = this.getPotatoList();
-    debugger;
+    
 
     return(
       <div className="potato-feed-header">

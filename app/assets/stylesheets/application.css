@@ -44,9 +44,11 @@ li {
   margin: 0 auto;
   height: 600px;
   border: 3px solid pink;
+  overflow: scroll;
 
 }
 .potato-feed-list {
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,18 +57,30 @@ li {
 }
 
 .potato-feed-detail-container {
+  font-size: 15px;
+  display: flex;
   border: 2px solid red;
   width: 800px;
   max-width: 90%;
 }
 
-.potato-feed-detail-container:first-child {
+.potato-feed-detail-section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.potato-feed-detail-section ul {
   
 }
 
 .potato-feed-detail-info {
-  border: 2px solid purple;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
    
 
 
