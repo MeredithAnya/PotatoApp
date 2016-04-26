@@ -1,17 +1,33 @@
 var React = require('react');
 
 var PotatoFeedDetail = React.createClass({
+    getDate: function(){
+    	var date = new Date(this.props.published);
+    	var parts = date.toString().split(" ");
+    	var wanted = [parts[1], parts[2], parts[3]];
 
+
+    	return "Published on " + wanted.join(" ");
+    	
+
+    },
 	render: function(){
+		
+		var regExp = /\(([^)]+)\)/;
+    	var authorName = regExp.exec(this.props.author);
+    	if (authorName){
+    		authorName = authorName[1];
+    	}
+	    
 		return (
 			<div className="potato-feed-detail-container">
-			  <img src="http://farm2.staticflickr.com/1445/26522341331_d2ce4880a6_m.jpg"></img>
+			  <img src={this.props.media}></img>
 			  <section className="potato-feed-detail-section">
-			    <h1>Title</h1>
+			    <h1>{this.props.title}</h1>
 			    <ul className="potato-feed-detail-info">
-				  <li>Published Day</li>
-				  <li>Author</li>
-				  <li>View On Flickr</li>
+				  <li>{authorName}</li>
+				  <li>{this.getDate()}</li>
+				  <li>View on Flickr</li>
 				</ul>  
 			  </section>
 			</div>
