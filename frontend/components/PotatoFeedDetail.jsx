@@ -1,4 +1,5 @@
 var React = require('react');
+var Link = require('react-router').Link;
 
 var PotatoFeedDetail = React.createClass({
     getDate: function(){
@@ -23,11 +24,11 @@ var PotatoFeedDetail = React.createClass({
 			<div className="potato-feed-detail-container">
 			  <img src={this.props.media}></img>
 			  <section className="potato-feed-detail-section">
-			    <h1>{this.props.title}</h1>
+			    <Link to="/post/1"><h1>{this.props.title}</h1></Link>
 			    <ul className="potato-feed-detail-info">
-				  <li>{authorName}</li>
+				  <li><a href={"https://flickr.com/people/" + this.props.authorId}>{authorName}</a></li>
 				  <li>{this.getDate()}</li>
-				  <li>View on Flickr</li>
+				  <li><a href={this.props.linkToFlickr}>View on Flickr</a></li>
 				</ul>  
 			  </section>
 			</div>

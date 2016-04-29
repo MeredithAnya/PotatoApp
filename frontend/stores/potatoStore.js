@@ -11,6 +11,14 @@ PotatoStore.all = function(){
 };
 
 PotatoStore.find = function(id){
+  debugger;
+  var post = _potatoes[id],
+      linkToFlickr = post.link;
+      authorId = post.author_id;
+      title = post.title;
+      //need the rest of attributes
+      //return object with correct format 
+
 	return _potatoes[id];
 }
 

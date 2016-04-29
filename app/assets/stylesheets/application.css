@@ -40,8 +40,21 @@ li {
 }
 
 img {
-  width: 200px;
-  height: 150px;
+    position: relative;
+    float: left;
+    width:  150px;
+    height: 125px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+    transition: width .5s, height .5s, background-color 2s, transform 2s;
+}
+
+img:hover {
+  width: 160px;
+  height: 135px;
+  transition: .3s;
+  cursor: pointer;
 }
 
 .potato-feed-header {
@@ -59,8 +72,9 @@ img {
   align-items: center;
   height: 600px;
   overflow: scroll;
-  border-top: 2px solid black;
-  border-right: 2px solid black;
+  border-top: 2px solid #a6a6a6;
+  border-right: 2px solid #a6a6a6;
+  border-left: 2px solid #a6a6a6;
 
 
 }
@@ -69,7 +83,9 @@ img {
   width: auto;
   font-size: 10px;
   display: flex;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #a6a6a6;
+  padding: 15px;
+  background-color:   rgba(191, 191, 191, .8);
   /*border-top: 2px solid black;*/
   /*border: 2px solid black;*/
 }
@@ -77,10 +93,12 @@ img {
 .potato-feed-detail-section {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 90%;
   justify-content: space-between;
-  margin: 10px;
+  margin-left: 10px;
+  padding: 5px;
   font-size: 30px;
+  background-color: rgb(230, 230, 230)
 }
 
 .potato-feed-detail-section ul {

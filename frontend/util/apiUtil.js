@@ -3,7 +3,7 @@ var PotatoActions = require('../actions/potatoActions');
 var ApiUtil = {
   fetchPotatoes: function(){
 	  $.ajax({
-	  	url: '//api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json&jsoncallback=?',
+	  	url: '//api.flickr.com/services/feeds/photos_public.gne?tags=squash&tagmode=all&format=json&jsoncallback=?',
 	  	type: 'GET',
 	  	dataType: 'jsonp',
 	  	jsonp: 'jsonFlickrFeed',

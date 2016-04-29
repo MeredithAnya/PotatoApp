@@ -14,6 +14,9 @@ var PotatoFeed = React.createClass({
   onChange: function(){
   	this.setState({potatoPosts: PotatoStore.all()})
   },
+  componentWillUnmount: function(){
+    this.potatoToken.remove();
+  },
   getPotatoList: function(){
     var author;
     var published;
@@ -37,6 +40,7 @@ var PotatoFeed = React.createClass({
                                  linkToFlickr={linkToFlickr}
                                  published={published}
                                  author={author}
+                                 authorId={authorId}
                                  media={media}
                                  title={title}
                                  tags={tags}/>;
@@ -50,7 +54,7 @@ var PotatoFeed = React.createClass({
   render: function () {
 
     var potatoesList = this.getPotatoList();
-    debugger;
+    
 
     return(
       <div className="potato-feed-header">
